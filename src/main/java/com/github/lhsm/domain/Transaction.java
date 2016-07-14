@@ -96,6 +96,10 @@ public class Transaction {
         return depositAccount.getId();
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
         return MoreObjects.toStringHelper(this)

@@ -33,7 +33,6 @@ public class TransactionServiceImpl implements TransactionService {
             throw new RuntimeException("Insufficient balance");
         }
 
-
         Transaction transaction = new Transaction(
                 wAccount,
                 getAccount(depositAccount),
@@ -44,7 +43,6 @@ public class TransactionServiceImpl implements TransactionService {
 
         return transactionRepository.save(transaction);
     }
-
 
     private Account getAccount(long accountId) {
         Account account = accountRepository.getOne(accountId);
